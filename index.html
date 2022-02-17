@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="logo">
+      <img src="/images/logo.svg" alt="logo">
+    </div>
+
+    <main class="calculator__container">
+      <div class="calculator__container-inner">
+        <div class="left__container">
+          <div class="bill-container">
+            <label for="bill" class="calculator__bill title">Bill</label>
+            <input type="number" id="bill" placeholder="$">
+          </div>
+          <div class="buttons">
+            <h4 class="calculator__tip title">Select Tip %</h4>
+            <button class="button">5%</button>
+            <button class="button">10%</button>
+            <button class="button">15%</button>
+            <button class="button">25%</button>
+            <button class="button">50%</button>
+            <input type="number" min="0" placeholder="Custom">
+          </div>
+          <div class="num__people">
+            <h4 class="title">Number of People
+              <span class="error-msg">Can't be zero.</span>
+            </h4>
+            <input id="num__people" type="number" min="0">
+          </div>
+        </div>
+        <div class="right__container">
+          <div class="tip">
+            <h3 class="calculator__tip-rigth">Tip Amount</h3>
+            <p class="person"> / person</p>
+            <h2 class="tip__amount">$0.00</h2>
+          </div>
+          <div class="total">
+            <h3 class="calculator__total-rigth">Total</h3>
+            <p class="person">/ person
+            </p>
+            <h2 class="total">$0.00</h2>
+          </div>
+          <button class="reset">Reset</button>
+        </div>
+      </div>
+    </main>
+    <script src="/js/app.js"></script>
+  </body>
+</html>

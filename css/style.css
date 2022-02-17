@@ -1,0 +1,140 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body{
+	background-color:var(--Light-grayish-cyan);
+	min-height: 100vh;
+    min-width: 100vw;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+	font-family: 'Space Mono', monospace;
+}
+
+
+
+:root{
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan2: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Light-grayish-cyan2: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+.logo{
+	margin-bottom:3rem;
+}
+
+.calculator__container{
+    background-color: var(--White);
+    border-radius: 1rem;
+    width: 40rem;
+    height: 24rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;	
+}
+.calculator__container-inner{
+	display: flex;
+}
+
+.left__container{
+	width: 45%;
+    height: 85%;
+	padding-right:3rem;	
+}
+
+
+
+.bill-container{
+	padding-bottom:1.5rem;
+}
+
+#bill,#num__people{
+    height: 2rem;
+    text-align: right;
+    background: url(/tip-calculator-app-main/images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: left 18px top 8px;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+
+    border-radius: 0.3rem;
+    border: none;
+    color: var(--Dark-grayish-cyan);
+    background-color:var(--Light-grayish-cyan2);
+
+    outline-color: var(--Strong-cyan);
+    
+    cursor: pointer;
+    width: 100%;
+}
+
+.title{
+	color: var(--Dark-grayish-cyan2);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 0.2rem;
+}
+.error-msg{
+	color:red;
+	display:none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.buttons h4{
+    color: var(--Dark-grayish-cyan2);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 0.2rem;
+    
+}
+.buttons button,.buttons input{
+    display: inline;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 30%;
+    height: 2rem ;
+    margin: 0.4rem 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+.buttons button{
+    background-color: var(--Very-dark-cyan);
+    color: var(--Light-grayish-cyan2);
+    
+   
+}
+.buttons button:focus{
+    background-color:var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan) ;
+}
+.buttons input{
+    outline-color: var(--Strong-cyan);
+    text-align: right;
+    color: var(--Very-dark-cyan);
+    background-color: var(--Light-grayish-cyan2);
+}
+
+
+
+.right__container{
+	width: 45%;
+    height: 85%;
+	background-color:var(--Very-dark-cyan)
+}
