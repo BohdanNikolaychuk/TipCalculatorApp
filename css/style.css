@@ -18,6 +18,22 @@ body{
 }
 
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+.selectTipCustomC-active {
+    border: 2px solid hsla(172, 67%, 45%, 1) !important;
+}
+
+
+
 
 :root{
     --Strong-cyan: hsl(172, 67%, 45%);
@@ -37,19 +53,19 @@ body{
     border-radius: 1rem;
     width: 40rem;
     height: 24rem;
-
     display: flex;
     align-items: center;
     justify-content: center;	
 }
-.calculator__container-inner{
-	display: flex;
-}
 
 .left__container{
-	width: 45%;
+    width: 45%;
     height: 85%;
-	padding-right:3rem;	
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 1rem;
 }
 
 
@@ -61,7 +77,6 @@ body{
 #bill,#num__people{
     height: 2rem;
     text-align: right;
-    background: url(/tip-calculator-app-main/images/icon-dollar.svg);
     background-repeat: no-repeat;
     background-position: left 18px top 8px;
     font-family: 'Space Mono', monospace;
@@ -85,16 +100,34 @@ body{
     font-size: 14px;
     margin-bottom: 0.2rem;
 }
-.error-msg{
-	color:red;
-	display:none;
+.billError-msg{
+    visibility: hidden;
+	
+}
+.countError-msg{
+    visibility: hidden;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.billError-msg-active{ 
+    visibility: visible;
+   
+    color: #F44336;
 }
+
+.countError-msg-active{
+    visibility: visible;
+    color: #F44336;
+}
+
+.selectTipCustomC-active {
+    border: 2px solid hsla(172, 67%, 45%, 1) !important;
+}
+
+.errorInput-active {
+    border: 2px solid #F44336 !important;
+}
+
+
 .buttons h4{
     color: var(--Dark-grayish-cyan2);
     font-weight: 600;
@@ -114,16 +147,27 @@ input[type="number"]::-webkit-inner-spin-button {
     cursor: pointer;
     border-radius: 0.2rem;
 }
-.buttons button{
+
+
+.button{
+    color: var(--White);
+    font-size: 24px;
     background-color: var(--Very-dark-cyan);
-    color: var(--Light-grayish-cyan2);
-    
-   
+    border: none;
+    padding: 0.2em 1.5em;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }
-.buttons button:focus{
+
+.selectTipBtnC-active{
     background-color:var(--Light-grayish-cyan);
     color: var(--Very-dark-cyan) ;
 }
+
+
+
 .buttons input{
     outline-color: var(--Strong-cyan);
     text-align: right;
@@ -131,10 +175,49 @@ input[type="number"]::-webkit-inner-spin-button {
     background-color: var(--Light-grayish-cyan2);
 }
 
-
+.selectTipCustomC-active {
+    border: 2px solid hsla(172, 67%, 45%, 1);
+}
 
 .right__container{
-	width: 45%;
+    background-color: var(--Very-dark-cyan);
+    width: 45%;
     height: 85%;
-	background-color:var(--Very-dark-cyan)
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.tip, .total{
+    display: flex;
+    color: var(--White);
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    
+}
+.tip p,.total p{
+    font-size: 0.7rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    color: var(--Dark-grayish-cyan2);
+}
+.tip h2, .total h2{
+    color: var(--Strong-cyan);
+}
+
+
+
+.reset{
+ background-color: var(--Strong-cyan);
+    border:none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    color:var(--Very-dark-cyan);
+    font-weight: 700;
+    height: 5rem;
+    cursor: pointer;
+    text-transform: u;
 }
