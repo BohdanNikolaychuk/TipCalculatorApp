@@ -35,14 +35,13 @@
           <button class="button" value="15">15%</button>
           <button class="button" value="25">25%</button>
           <button class="button" value="50">50%</button>
-          <input class="custom" type="number" placeholder="Custom"
-            onfocus="customFocus()" onkeyup="count(); tipsCustom();">
+          <input class="custom" type="number" placeholder="Custom">
         </div>
         <div class="num__people">
           <h4 class="title">Number of People
             <span class="countError-msg">Can't be zero.</span>
           </h4>
-          <input id="num__people" type="number">
+          <input id="num__people" type="number" onkeyup="count()">
         </div>
       </div>
       <div class="right__container">
